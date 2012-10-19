@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script data-main="js/application" src="js/require.js"></script>
+
+</head>
+<body>
+
+
+<p>Number 1 : <input id="a" value="10"/></p>
+<p>Number 2 : <input id="b" value="0"/></p>
+
+<h3>Result : <span data-bind="text: parseInt( a.value ) + parseInt( b.value )" ></span></h3>
+
+<button  data-bind="disabled: a.value < 50 " >Work</button>
+
+</body>
+</html>

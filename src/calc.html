@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/gbind.js"></script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+var model1 = {
+     num1 : 0
+    ,num2  : 0
+    ,rslt  : 0
+    ,rslt1 : this.num1 + this.num2
+};
+
+
+$(function(){
+	
+	gbind.bindable("model1",model1);
+	
+	
+	gbind.watch("model1", ["num1","num2"], function(model){
+		model.rslt = parseInt(model.num1) + parseInt(model.num2);
+	})
+
+
+	
+});
+
+</script>
+
+<p>Number 1 : <input data-bind="value: model1.num1, trigger:keyup" id="a"/></p>
+<p>Number 2 : <input data-bind="value: model1.num2, trigger:keyup" id="b"/></p>
+
+<h2>Result : <span data-bind="text: model1.rslt"> </span></h2>
+<h3>Result : <span data-bind="text: (a.value + b.value)"></span></h3>
+
+</body>
+</html>

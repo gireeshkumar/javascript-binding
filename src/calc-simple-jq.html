@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
+</head>
+<body>
+
+
+<p>Number 1 : <input id="a" value="10"/></p>
+<p>Number 2 : <input id="b" value="0"/></p>
+
+<h3>Result : <span id="output"></span></h3>
+
+<script type="text/javascript">
+
+$(function(){
+	
+	$("#a,#b").keyup(function(){
+		$("#output").text( parseInt($("#a").val())  +  parseInt($("#b").val()));
+	});
+	
+});
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/gbind.js"></script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+var model1 = {
+     firstName : null
+    ,lastName  : null
+    ,fullName  : null
+};
+
+
+$(function(){
+	
+	gbind.bindable("model1",model1);
+	
+	
+	gbind.watch("model1", ["firstName","lastName"], function(model){
+		model.fullName = model.firstName + " " + model.lastName;
+	})
+
+
+	
+});
+
+</script>
+
+
+<p>First name: <input data-bind="value: model1.firstName, trigger:keyup" /></p>
+<p>Last name: <input data-bind="value: model1.lastName, trigger:keyup" /></p>
+<h2>Hello, <span data-bind="text: model1.fullName"> </span>!</h2>
+
+<div>
+Your Name <span id="sp1" data-bind="html:model1.firstName"></span><span id="sp1" data-bind="html:model1.lastName"></span>
+</div>
+
+</body>
+</html>

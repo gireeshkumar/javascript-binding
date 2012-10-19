@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/esprima.js"></script>
+<script type="text/javascript" src="js/gbind1.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+
+var name = "gireesh";
+
+var model = {
+		fname : "gireesh"
+		,lname : "kumar"
+};
+
+function formatD(val){
+	return "formatted :"+val;
+}
+
+function setvalue(){
+	model.fname = $("#bb").val();
+}
+
+function set0(){
+	model.fname = $('#a1').val();
+}
+
+function set1(){
+	model.lname = $('#b1').val();
+}
+
+
+</script>
+
+<p>Number 1 : <input id="a" value="0"/></p>
+<p>Number 2 : <input id="b" value="0"/></p>
+
+
+<!-- <h3>Number1 : <span data-bind="text: name"></span></h3> -->
+
+<!-- <h3>formatD( model.fname ) : <span data-bind="text: formatD( model.fname )"></span></h3>
+<h3>fname + lname : <span data-bind="text:  model.fname + ' ' +model.lname"></span></h3> -->
+<h3>a.value + b.value : <span data-bind="text: parseInt( a.value ) + parseInt( b.value )" data-bind-trigger="keyup"></span></h3>
+
+</br>
+
+
+<p>FName : <input id="a1" onchange="set0()"/></p>
+<p>LName : <input id="b1" onchange="set1()"/></p>
+
+
+
+
+<!-- 
+<h3>Result : <span data-bind="text: (a.value + b.value)"></span></h3>
+
+<h3>Number1 : <span data-bind="text: formatD(a.value)"></span></h3>
+
+<h3>Number1 : <span data-bind="text: 10 + (a.value + b.value)"></span></h3> -->
+</body>
+</html>

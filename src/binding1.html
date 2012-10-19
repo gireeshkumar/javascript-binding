@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+
+<!-- <script data-main="js/application" src="js/require.js"></script> -->
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/esprima.js"></script>
+<script type="text/javascript" src="js/gbind1.js"></script>
+
+
+<style type="text/css">
+
+.cvisible{
+	display: none;
+}
+.chidden{
+	display: block;
+}
+
+</style>
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+var mymodel = {
+		
+		username : null,
+		role : null
+		
+};
+
+function styleClassByRole(role, target){
+	var tcl = role == target ? 'chidden' : 'cvisible';
+	return tcl;
+}
+
+
+</script>
+
+
+<p>Name :<input type="text" id="ain" data-bind="value:mymodel.username" data-bind-trigger="keyup"> </p>
+<p>Role : 
+	<select data-bind="value:mymodel.role" id="rleSel">
+		<option>User</option>
+		<option>Admin</option>
+	</select> 
+</p>
+
+
+<hr/>
+
+<p>
+[1] <span id="sp1" data-bind="html:'Welcome ' + mymodel.username + ',Your Role - ' + mymodel.role "></span>
+</p>
+
+<p>
+[2] <span id="sp1" data-bind="html:'Welcome ' + ain.value + ',Your Role - '+ rleSel.value "></span>
+</p>
+
+Role : <input type="text" id="aout" data-bind="value:mymodel.role">
+
+<input type="text" id="aout" data-bind="value:mymodel.username">
+<input type="text" id="aout" data-bind="value:mymodel.username">
+
+
+<!--  container for user control -->
+
+<div data-bind="class: styleClassByRole (mymodel.role, 'User') "> 
+
+ <button>User button1</button>
+ <button>User button2</button>
+
+</div>
+
+
+<!--  container for Admin control -->
+
+<div data-bind="class: styleClassByRole (mymodel.role, 'Admin') "> 
+
+ <button>Admin button1</button>
+ <button>Admin button2</button>
+
+</div>
+
+
+</body>
+</html>

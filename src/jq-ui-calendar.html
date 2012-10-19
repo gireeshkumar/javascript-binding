@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+
+<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.21.custom.css" rel="stylesheet" />
+<link type="text/css" href="css/demos.css" rel="stylesheet" />
+
+
+<!--  below 3 (jquery, esprima, gbind1) js files are required, in the same order -->
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/esprima.js"></script>
+<script type="text/javascript" src="js/gbind1.js"></script>
+
+<script type="text/javascript" src="js/widget-conf.js"></script>
+
+
+<script type="text/javascript" src="js/jqui/jquery-ui-1.8.21.custom.min.js"></script>
+</head>
+<body>
+
+<!-- 
+
+Date: <div  id="datepicker" 
+			data-bind-widget="datepicker"
+			data-bind-widget-options="{	showButtonPanel: true, changeMonth: true, changeYear: true, dateFormat: 'DD, d MM, yy'}"
+		></div>
+
+
+<h3>Selected Date : <span  id="out"   data-bind="text: datepicker.selectedDate"></span></h3>
+
+<hr/>
+
+Slider : <div id="slider" data-bind-widget="slider" style="width:100px"></div>
+<h3>Slider Value : <span  data-bind="text: slider.value"></span></h3>
+
+<hr/>
+Slider : <div id="slider1" data-bind-widget="slider" data-bind-widget-options="{ value: 37 }" style="width:100px"></div>
+<h3>Slider Value : <span  data-bind="text: slider1.value" 
+						  data-bind-trigger="slidechange"
+						  ></span>
+				</h3>
+				
+<hr/> -->
+
+<div id="progressbar"   data-bind="value: sliderp.value" data-bind-widget="progressbar" style="width:200px"></div>
+
+<h3>Progressbar Value : <span  data-bind="text: progressbar.value" ></span></h3>
+
+<p>Change to : <div id="sliderp" data-bind-widget="slider" data-bind-widget-options="{ value: 5 }" style="width:100px"></div></p>
+
+<h3>Slider Value : <span  data-bind="text: sliderp.value" 
+						  data-bind-trigger="slidechange"
+						  ></span>
+				</h3>
+</body>
+</html>
