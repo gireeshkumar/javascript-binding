@@ -17,7 +17,7 @@
 <p>Number 1 : <input id="a" value="10"/></p>
 <p>Number 2 : <input id="b" value="0"/></p>
 
-<h3>Result : <span data-bind="text: parseInt( a.value ) + parseInt( b.value )" ></span></h3>
+<h3>Result : <span data-bind="text: parseInt( a.value ) + parseInt( b.value )"  data-bind-trigger="keyup"></span></h3>
 
 <button  data-bind="disabled: a.value < 50 " >Work</button>
 
