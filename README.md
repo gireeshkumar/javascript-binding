@@ -14,6 +14,9 @@ CSS binding
 
     <button  data-bind="disabled: a.value < 50 " >Work</button>
     
+-
+    <button  data-bind="disabled: (parseInt( a.value ) + parseInt( b.value )) < 50 " >Total &gt; 50</button>
+    
 http://jsfiddle.net/pBGPL/2/
     
 Using custom trigger
