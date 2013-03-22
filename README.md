@@ -44,6 +44,17 @@ http://jsfiddle.net/Z3sha/1/
     
 With JQUI progress bar with live update
 
+        <div id="progressbar"   data-bind="value: sliderp.value" data-bind-widget="progressbar" style="width:200px"></div>
+        
+        <h3>Progressbar Value : <span  data-bind="text: progressbar.value" ></span></h3>
+        
+        <p>Change to : <div id="sliderp" data-bind-widget="slider" data-bind-widget-options="{ value: 5 }" style="width:100px"></div></p>
+        
+        <h3>Slider Value : <span  data-bind="text: sliderp.value" 
+            					  data-bind-trigger="slidechange"
+        						  ></span>
+        				</h3>
+
 http://jsfiddle.net/Fp8gF/
 
 
