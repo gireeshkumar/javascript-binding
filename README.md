@@ -14,6 +14,8 @@ CSS binding
 
     <button  data-bind="disabled: a.value < 50 " >Work</button>
     
+http://jsfiddle.net/pBGPL/2/
+    
 Using custom trigger
 
     var model1 = {
