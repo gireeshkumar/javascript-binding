@@ -37,3 +37,11 @@ Using custom trigger
 Apply custom style classes
 
 http://jsfiddle.net/YQF4t/3/
+
+With JQuery UI object - Accordion
+
+    http://jsfiddle.net/Z3sha/1/
+    
+With JQUI progress bar with live update
+
+    http://jsfiddle.net/Fp8gF/
