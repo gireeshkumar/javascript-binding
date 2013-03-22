@@ -29,3 +29,8 @@ Using custom trigger
     
     <h2>Result : <span data-bind="text: model1.rslt"> </span></h2>
     <h3>Result : <span data-bind="text: (a.value + b.value)"></span></h3>
+
+
+Apply custom style classes
+
+http://jsfiddle.net/YQF4t/3/
